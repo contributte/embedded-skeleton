@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{block #title}Skywind Project{/}</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@1.2.0/dist/tailwind.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.2.5/dist/alpine.js"></script>
+</head>
+<body class="h-screen w-screen">
+<div>
+	<div class="max-w-5xl mx-auto border-b-2 border-gray-200">
+		<div class="flex h-16 items-center">
+			<h2 class="text-2xl font-semibold text-gray-800">
+				<a n:href="Home:">Skywind Project</a>
+			</h2>
+			<div class="flex-grow"></div>
+			<a <a n:href="Home:" class="text-md font-medium leading-5 text-gray-900">
+				Home
+			</a>
+		</div>
+	</div>
+
+	<div class="max-w-5xl mx-auto mt-16">
+		{include #content}
+	</div>
+
+	<footer class="max-w-5xl mx-auto border-t-2 pt-8 my-16 border-gray-200">
+		<div class="text-sm text-gray-600">{=date("Y")} &copy; Made by <a class="font-bold" href="https://f3l1x.io">f3l1x</a>. All rights reserved.</div>
+	</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div x-data="{ open: false }" x-on:keydown.escape="open = false">
+	<div
+			class="cursor-pointer outline-none focus:outline-none"
+			@click="open = true"
+	>
+		{include #trigger}
+	</div>
+
+	<div
+			class="absolute z-50 transform translate-y-2"
+			x-show="open"
+			@click.away="open = false"
+			x-transition:enter="transition-transform transition-opacity ease-out duration-200"
+			x-transition:enter-start="opacity-0 transform -translate-y-2"
+			x-transition:enter-end="opacity-100 transform translate-y-2"
+			x-transition:leave="transition ease-in duration-200"
+			x-transition:leave-end="opacity-0 transform -translate-y-3"
+	>
+		{include #dropdown}
+	</div>
+</div>

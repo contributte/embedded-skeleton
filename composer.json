@@ -1,0 +1,47 @@
+{
+  "name": "planette/skywind-project",
+  "description": "Skiwind Project is a tech boosted web starter kit project for Nette Framework with TailwindCSS, Alpine.js and other libs by @f3l1x.",
+  "keywords": [
+    "php",
+    "nette",
+    "planette",
+    "contributte",
+    "sandbox",
+    "project",
+    "web"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": "^7.2",
+    "contributte/application": "^0.4.0",
+    "contributte/bootstrap": "^0.4.0",
+    "contributte/di": "^0.4.0",
+    "contributte/forms": "^0.4.0",
+    "contributte/http": "^0.3.0",
+    "contributte/mail": "^0.5.0",
+    "contributte/utils": "^0.4.1",
+    "contributte/tracy": "^0.4.1",
+    "latte/latte": "dev-master",
+    "nette/robot-loader": "~3.2.0"
+  },
+  "require-dev": {
+    "ninjify/qa": "^0.10.0",
+    "ninjify/nunjuck": "^0.3.0",
+    "contributte/dev": "^0.2.0",
+    "phpunit/phpunit": "^9.0.0",
+    "phpstan/phpstan": "^0.12.0",
+    "phpstan/phpstan-doctrine": "^0.12.0",
+    "phpstan/phpstan-deprecation-rules": "^0.12.0",
+    "phpstan/phpstan-nette": "^0.12.0",
+    "phpstan/phpstan-phpunit": "^0.12.0",
+    "phpstan/phpstan-strict-rules": "^0.12.0"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "config": {
+    "platform": {
+      "php": "7.3"
+    }
+  }
+}

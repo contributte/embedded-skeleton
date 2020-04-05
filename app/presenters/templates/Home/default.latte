@@ -1,0 +1,76 @@
+{block #content}
+
+{* INFO *}
+<section class="my-16 mb-20">
+	<h1 class="text-4xl text-center mb-8">Skywind is tech <strong class="underline">boosted</strong> starter kit.</h1>
+	<div class="border-gray-400 border-2 p-4 mx-16 rounded-lg shadow-xl">
+		<div class="font-mono text-center">composer create-project planette/skywind-project --dev</div>
+	</div>
+</section>
+
+{* DROPDOWN *}
+<section class="mb-16">
+	<h2 class="border-l-2 border-blue-400 pl-4 text-2xl mb-6">Dropdown</h2>
+	<div class="rounded">
+		<div class="border-gray-200 border-2 border-b-0 p-6">
+			{widget $widgets->dropdown}
+			<button n:block="trigger" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+				Click me
+			</button>
+			<div n:block="dropdown" class="bg-white border shadow-lg transform-t">
+				<ul class="w-full sm:w-56 p-1 text-sm">
+					<li>
+						<a href="https://github.com/nette" class="block px-4 py-2 hover:bg-blue-200">
+							nette
+						</a>
+					</li>
+					<li class="border-b my-1"></li>
+					<li>
+						<a href="https://github.com/contributte" class="block px-4 py-2 hover:bg-blue-200">
+							contributte
+						</a>
+					</li>
+					<li class="border-b my-2"></li>
+					<li>
+						<a href="https://github.com/f3l1x" class="block px-4 py-2 hover:bg-blue-200">
+							f3l1x
+						</a>
+					</li>
+				</ul>
+			</div>
+			{/widget}
+		</div>
+		<div class="bg-gray-200 p-6">
+			@CODE TODO
+			{* {import "../@codes/dropdown1.latte"} *}
+		</div>
+	</div>
+</section>
+
+{* MODAL *}
+<section class="mb-16">
+	<h2 class="border-l-2 border-blue-400 pl-4 text-2xl mb-6">Modal</h2>
+	<div class="rounded">
+		<div class="border-gray-200 border-2 border-b-0 p-6">
+			{widget $widgets->modal}
+			<button n:block="trigger" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+				Open me
+			</button>
+			<div n:block="modal-title">
+				Simple modal
+			</div>
+			<div n:block="modal">
+				Hey man!
+			</div>
+			<div n:block="modal-actions">
+				<button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 focus:outline-none" @click="alert('Additional Action');">Action</button>
+				<button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 focus:outline-none" @click="open = false">Close</button>
+			</div>
+			{/widget}
+		</div>
+		<div class="bg-gray-200 p-6">
+			@CODE TODO
+			{* {import "../@codes/dropdown1.latte"} *}
+		</div>
+	</div>
+</section>

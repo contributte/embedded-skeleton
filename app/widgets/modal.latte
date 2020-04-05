@@ -1,0 +1,39 @@
+<div x-data="{ open: false }" x-on:keydown.escape="open = false">
+	<div
+			class="cursor-pointer outline-none focus:outline-none"
+			@click="open = true"
+	>
+		{include #trigger}
+	</div>
+
+	<div
+			class="overflow-auto fixed inset-0 z-50 flex items-center justify-center"
+			style="background-color: rgba(0,0,0,0.5)"
+			x-show="open"
+	>
+		<div
+				class="bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg py-4 text-left px-6"
+				@click.away="open = false"
+				x-transition:enter="ease-out duration-300"
+				x-transition:enter-start="opacity-0 scale-90"
+				x-transition:enter-end="opacity-100 scale-100"
+				x-transition:leave="ease-in duration-300"
+				x-transition:leave-start="opacity-100 scale-100"
+				x-transition:leave-end="opacity-0 scale-90"
+		>
+
+			<div n:ifset="#modal-title" class="flex justify-between items-center pb-3">
+				<div class="text-2xl font-bold">{include #modal-title}</div>
+				<div class="cursor-pointer" @click="open = false">&#10060;</div>
+			</div>
+
+			<div>
+				{include #modal}
+			</div>
+
+			<div n:ifset="#modal-actions" class="flex justify-end pt-2">
+				{include #modal-actions}
+			</div>
+		</div>
+	</div>
+</div>

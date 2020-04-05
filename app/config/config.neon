@@ -1,0 +1,53 @@
+# ======================================
+# Nette ================================
+php:
+	date.timezone: Europe/Prague
+	# session.save_path: %tempDir%/session
+	# zlib.output_compression: true
+
+latte:
+	xhtml: no
+
+session:
+	debugger: %debugMode%
+	expiration: '+14 days'
+	autoStart: smart
+
+routing:
+	debugger: %debugMode%
+
+di:
+	debugger: %debugMode%
+
+tracy:
+	email: %project.error.email%
+	strictMode: yes
+
+application:
+	catchExceptions: %productionMode%
+	errorPresenter: %project.error.presenter%
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+http:
+	headers:
+		X-XSS-Protection: "1; mode=block"
+		X-Powered-By: "contributte"
+
+# ======================================
+# Default parameters ===================
+parameters:
+	project:
+		error:
+			presenter: Error
+			email: webmaster@example.tld
+
+# ======================================
+# Default extensions ===================
+
+# @here
+
+# ======================================
+# Services =============================
+services:
+	router: App\Model\RouterFactory::createRouter
