@@ -1,0 +1,14 @@
+<div x-data="{ open: false }" @keydown.escape="open = false" class="inline-block">
+	<div class="relative flex justify-center">
+		<div
+				x-show="open"
+				class="absolute rounded-md text-white bg-black px-2 py-1 -mt-8 mx-auto"
+		>
+			{include tooltip}
+		</div>
+
+		<div @mouseover="open = true" @mouseout="open = false" class="cursor-pointer">
+			{include content}
+		</div>
+	</div>
+</div>

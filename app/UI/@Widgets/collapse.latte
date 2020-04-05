@@ -1,0 +1,9 @@
+<div x-data="{ expanded: false }">
+	<button @click="expanded = ! expanded">
+		{include trigger}
+	</button>
+
+	<p x-show="expanded" x-collapse>
+		{include content}
+	</p>
+</div>

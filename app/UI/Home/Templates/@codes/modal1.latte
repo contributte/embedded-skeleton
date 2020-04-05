@@ -1,0 +1,15 @@
+{embed "~modal"}
+	<button n:block="trigger" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+		Show me
+	</button>
+	<div n:block="title">
+		Embed modal
+	</div>
+	<div n:block="content">
+		Hey man!
+	</div>
+	<div n:block="actions">
+		<button class="px-4 bg-transparent py-2 rounded-lg text-blue-500 hover:bg-gray-200 hover:text-blue-400 mr-2 focus:outline-none" @click="alert('Additional Action');">Action</button>
+		<button class="modal-close px-4 bg-blue-500 py-2 rounded-lg text-white hover:bg-blue-800 focus:outline-none" @click="open = false">Close</button>
+	</div>
+{/embed}

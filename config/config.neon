@@ -1,0 +1,25 @@
+# ======================================
+# Config ===============================
+php:
+	date.timezone: Europe/Prague
+	# session.save_path: %tempDir%/session
+
+# ======================================
+# Extension ============================
+
+# ======================================
+# Services =============================
+services:
+	# myservice: App\Model\MyService
+
+	latte.latteFactory:
+		setup:
+			- setLoader(
+				App\Model\ExtraFileLoader()::withWidgets([
+					dropdown: %appDir%/UI/@Widgets/dropdown.latte
+					modal: %appDir%/UI/@Widgets/modal.latte
+					tooltip: %appDir%/UI/@Widgets/tooltip.latte
+					collapse: %appDir%/UI/@Widgets/collapse.latte
+					tabs: %appDir%/UI/@Widgets/tabs.latte
+				])
+			)
