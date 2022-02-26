@@ -14,6 +14,7 @@
 
 	<div
 			x-show="open"
+			x-cloak
 			@click.away="open = false"
 			x-transition:enter="transition-transform transition-opacity ease-out duration-200"
 			x-transition:enter-start="opacity-0 transform -translate-y-2"

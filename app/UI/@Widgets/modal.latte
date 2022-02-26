@@ -3,7 +3,7 @@
 		{include trigger}
 	</div>
 
-	<div x-show="open" class="overflow-auto fixed inset-0 z-50 flex items-center justify-center" style="background-color: rgba(0,0,0,0.5)">
+	<div x-show="open" x-cloak class="overflow-auto fixed inset-0 z-50 flex items-center justify-center" style="background-color: rgba(0,0,0,0.5)">
 		<div
 				@click.away="open = false"
 				x-transition:enter="ease-out duration-300"
