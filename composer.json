@@ -17,7 +17,7 @@
     "contributte/nella": "^0.1"
   },
   "require-dev": {
-    "contributte/qa": "^0.2",
+    "contributte/qa": "^0.3",
     "contributte/dev": "^0.3",
     "phpstan/phpstan": "^1.4.3",
     "phpstan/phpstan-deprecation-rules": "^1.0.0",
