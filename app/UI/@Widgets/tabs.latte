@@ -5,7 +5,7 @@
 		<ul class="flex items-stretch cursor-pointer space-x-1">
 			{for $i = 1; $i <= $tabs; $i++}
 				<li @click="tab = {$i}" :class="tab === {$i} ? 'bg-blue-300' : 'bg-gray-200'" class="px-3 py-1">
-					{block title-$i}{/block}
+					{block "title-$i"}{/block}
 				</li>
 			{/for}
 		</ul>
@@ -13,7 +13,7 @@
 		<div class="border border-blue p-2 mt-1">
 			{for $i = 1; $i <= $tabs; $i++}
 				<section x-show="tab === {$i}" {if $i > 1}x-cloak{/if}>
-					{block content-$i}{/block}
+					{block "content-$i"}{/block}
 				</section>
 			{/for}
 		</div>
