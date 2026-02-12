@@ -13,3 +13,6 @@ jobs:
   phpstan:
     name: "Phpstan"
     uses: contributte/.github/.github/workflows/phpstan.yml@v1
+    with:
+      php: "8.4"
+      make: "setup phpstan"
