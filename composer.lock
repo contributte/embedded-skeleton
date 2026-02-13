@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9756c6fdef2a1a8249af3c2dcf623383",
+    "content-hash": "f52f52737ebda5a2b531eae6ab9e6f67",
     "packages": [
         {
             "name": "contributte/application",
@@ -83,35 +83,32 @@
         },
         {
             "name": "contributte/bootstrap",
-            "version": "v0.6.0",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/bootstrap.git",
-                "reference": "6f6d0e7aaf63c62b2f38a1fdd29ee316ccadd2d1"
+                "reference": "0c6e85f1de94cdf537f1942c9777d792ccf32b21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/bootstrap/zipball/6f6d0e7aaf63c62b2f38a1fdd29ee316ccadd2d1",
-                "reference": "6f6d0e7aaf63c62b2f38a1fdd29ee316ccadd2d1",
+                "url": "https://api.github.com/repos/contributte/bootstrap/zipball/0c6e85f1de94cdf537f1942c9777d792ccf32b21",
+                "reference": "0c6e85f1de94cdf537f1942c9777d792ccf32b21",
                 "shasum": ""
             },
             "require": {
                 "nette/bootstrap": "^3.2.0",
                 "nette/utils": "^3.2.9 || ^4.0.0",
-                "php": ">=7.4"
+                "php": ">=8.2"
             },
             "require-dev": {
-                "ninjify/nunjuck": "^0.4",
-                "ninjify/qa": "^0.12",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-nette": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0"
+                "contributte/phpstan": "^0.2.0",
+                "contributte/qa": "^0.4.0",
+                "contributte/tester": "^0.3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.7-dev"
+                    "dev-master": "0.8.x-dev"
                 }
             },
             "autoload": {
@@ -139,7 +136,7 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/bootstrap/issues",
-                "source": "https://github.com/contributte/bootstrap/tree/v0.6.0"
+                "source": "https://github.com/contributte/bootstrap/tree/v0.7.0"
             },
             "funding": [
                 {
@@ -151,7 +148,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-24T20:25:44+00:00"
+            "time": "2025-12-29T16:48:41+00:00"
         },
         {
             "name": "contributte/di",
@@ -310,30 +307,31 @@
         },
         {
             "name": "contributte/latte",
-            "version": "v0.6.1",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/latte.git",
-                "reference": "e89045e3c2b7aea08ef48a25136f0d64cc92c290"
+                "reference": "ccbacbaa5e718ae2e7632e218ba28b868642c5c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/latte/zipball/e89045e3c2b7aea08ef48a25136f0d64cc92c290",
-                "reference": "e89045e3c2b7aea08ef48a25136f0d64cc92c290",
+                "url": "https://api.github.com/repos/contributte/latte/zipball/ccbacbaa5e718ae2e7632e218ba28b868642c5c4",
+                "reference": "ccbacbaa5e718ae2e7632e218ba28b868642c5c4",
                 "shasum": ""
             },
             "require": {
-                "latte/latte": "^3.0.12",
+                "latte/latte": "^3.1.0",
                 "php": ">=8.2"
             },
             "require-dev": {
                 "contributte/phpstan": "^0.1",
                 "contributte/qa": "^0.4",
-                "contributte/tester": "^0.4",
+                "contributte/tester": "^0.3",
                 "nette/application": "^3.1.14",
                 "nette/di": "^3.0.17"
             },
             "suggest": {
+                "erusev/parsedown-extra": "to use ParsedownExtension[CompilerExtension]",
                 "nette/di": "to use VersionExtension[CompilerExtension]"
             },
             "type": "library",
@@ -366,7 +364,7 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/latte/issues",
-                "source": "https://github.com/contributte/latte/tree/v0.6.1"
+                "source": "https://github.com/contributte/latte/tree/v0.7.0"
             },
             "funding": [
                 {
@@ -378,31 +376,34 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-09T12:34:06+00:00"
+            "time": "2025-12-28T15:15:52+00:00"
         },
         {
             "name": "contributte/nella",
-            "version": "v0.2.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/nella.git",
-                "reference": "63cdae025404aa2215d5f3536207087a4bd5b402"
+                "reference": "9e53a61ff993667077eec6ce4e1b3bf484e0c468"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/nella/zipball/63cdae025404aa2215d5f3536207087a4bd5b402",
-                "reference": "63cdae025404aa2215d5f3536207087a4bd5b402",
+                "url": "https://api.github.com/repos/contributte/nella/zipball/9e53a61ff993667077eec6ce4e1b3bf484e0c468",
+                "reference": "9e53a61ff993667077eec6ce4e1b3bf484e0c468",
                 "shasum": ""
             },
             "require": {
-                "contributte/application": "^0.5.2 || ^0.6.0",
-                "contributte/bootstrap": "^0.6.0",
-                "contributte/di": "^0.5.6 || ^0.6.0",
+                "contributte/application": "^0.6.2 || ^0.7.0",
+                "contributte/bootstrap": "^0.6.0 || ^0.7.0",
+                "contributte/di": "^0.6.0 || ^0.7.0",
                 "contributte/forms": "^0.5.1 || ^0.6.0",
-                "contributte/latte": "^0.6.0",
-                "contributte/tracy": "^0.6.0",
-                "contributte/utils": "^0.6.0",
-                "php": ">=8.1"
+                "contributte/latte": "^0.6.0 || ^0.7.0",
+                "contributte/tracy": "^0.6.0 || ^0.7.0",
+                "contributte/utils": "^0.7.0 || ^0.8.0",
+                "php": ">=8.2"
+            },
+            "conflict": {
+                "nette/application": "<3.2.5"
             },
             "require-dev": {
                 "contributte/phpstan": "^0.1",
@@ -413,7 +414,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.2.x-dev"
+                    "dev-master": "0.3.x-dev"
                 }
             },
             "autoload": {
@@ -441,7 +442,7 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/nella/issues",
-                "source": "https://github.com/contributte/nella/tree/v0.2.0"
+                "source": "https://github.com/contributte/nella/tree/v0.3.0"
             },
             "funding": [
                 {
@@ -453,33 +454,33 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-04T19:43:02+00:00"
+            "time": "2025-12-29T19:08:46+00:00"
         },
         {
             "name": "contributte/tracy",
-            "version": "v0.6.0",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/tracy.git",
-                "reference": "36b64184b8042fc59eff49a2a2d32c56c24298fe"
+                "reference": "372c112941593671712df16c89cce629618f80e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/tracy/zipball/36b64184b8042fc59eff49a2a2d32c56c24298fe",
-                "reference": "36b64184b8042fc59eff49a2a2d32c56c24298fe",
+                "url": "https://api.github.com/repos/contributte/tracy/zipball/372c112941593671712df16c89cce629618f80e8",
+                "reference": "372c112941593671712df16c89cce629618f80e8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "tracy/tracy": "^2.9.0"
             },
             "conflict": {
                 "nette/di": "<3.1.0"
             },
             "require-dev": {
-                "contributte/phpstan": "^0.1",
-                "contributte/qa": "^0.4",
-                "contributte/tester": "^0.3",
+                "contributte/phpstan": "^0.1.0",
+                "contributte/qa": "^0.4.0",
+                "contributte/tester": "^0.3.0",
                 "mockery/mockery": "^1.5.0",
                 "nette/di": "^3.1.2"
             },
@@ -516,7 +517,7 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/tracy/issues",
-                "source": "https://github.com/contributte/tracy/tree/v0.6.0"
+                "source": "https://github.com/contributte/tracy/tree/v0.7.0"
             },
             "funding": [
                 {
@@ -528,37 +529,35 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-31T15:00:21+00:00"
+            "time": "2025-12-30T17:51:52+00:00"
         },
         {
             "name": "contributte/utils",
-            "version": "v0.6.0",
+            "version": "v0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/utils.git",
-                "reference": "f9796645d3cc2b0fa75ee5de0e35d24421feb35e"
+                "reference": "74c01a1f2832dcb414a3c1a149f836943e193e88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/utils/zipball/f9796645d3cc2b0fa75ee5de0e35d24421feb35e",
-                "reference": "f9796645d3cc2b0fa75ee5de0e35d24421feb35e",
+                "url": "https://api.github.com/repos/contributte/utils/zipball/74c01a1f2832dcb414a3c1a149f836943e193e88",
+                "reference": "74c01a1f2832dcb414a3c1a149f836943e193e88",
                 "shasum": ""
             },
             "require": {
-                "nette/utils": "^3.2.9 || ^4.0.0",
-                "php": ">=8.0"
+                "nette/utils": "^4.0.0",
+                "php": ">=8.1"
             },
             "conflict": {
                 "nette/di": "<3.0.0"
             },
             "require-dev": {
-                "nette/di": "^3.1.0",
-                "ninjify/nunjuck": "^0.4.0",
-                "ninjify/qa": "^0.12.0",
-                "phpstan/phpstan": "^1.9.0",
-                "phpstan/phpstan-deprecation-rules": "^1.1.0",
-                "phpstan/phpstan-nette": "^1.2.0",
-                "phpstan/phpstan-strict-rules": "^1.4.0"
+                "contributte/phpstan": "^0.1",
+                "contributte/qa": "^0.4",
+                "contributte/tester": "^0.3",
+                "mockery/mockery": "^1.5.0",
+                "nette/di": "^3.1.8"
             },
             "suggest": {
                 "nette/di": "to use DateTimeExtension[CompilerExtension]"
@@ -566,7 +565,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.6.x-dev"
+                    "dev-master": "0.7.x-dev"
                 }
             },
             "autoload": {
@@ -595,7 +594,7 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/utils/issues",
-                "source": "https://github.com/contributte/utils/tree/v0.6.0"
+                "source": "https://github.com/contributte/utils/tree/v0.7.0"
             },
             "funding": [
                 {
@@ -607,7 +606,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-25T12:54:31+00:00"
+            "time": "2023-11-17T11:06:47+00:00"
         },
         {
             "name": "latte/latte",
@@ -2413,12 +2412,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.4"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
