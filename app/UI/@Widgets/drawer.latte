@@ -1,0 +1,52 @@
+{default $side = 'right'}
+{default $width = 'md'}
+
+{var $widths = [
+	sm => 'w-64',
+	md => 'w-80',
+	lg => 'w-96',
+	xl => 'w-1/3',
+]}
+{var $slideStart = $side === 'left' ? '-translate-x-full' : 'translate-x-full'}
+
+<div x-data="{ open: false }" @keydown.escape="open = false">
+	<div @click="open = true" class="cursor-pointer">
+		{include #trigger}
+	</div>
+
+	{* Backdrop *}
+	<div x-show="open" x-cloak
+		 x-transition:enter="transition ease-out duration-300"
+		 x-transition:enter-start="opacity-0"
+		 x-transition:enter-end="opacity-100"
+		 x-transition:leave="transition ease-in duration-200"
+		 x-transition:leave-start="opacity-100"
+		 x-transition:leave-end="opacity-0"
+		 @click="open = false"
+		 class="fixed inset-0 z-40 bg-black bg-opacity-50">
+	</div>
+
+	{* Drawer panel *}
+	<div x-show="open" x-cloak
+		 x-transition:enter="transition ease-out duration-300"
+		 x-transition:enter-start="opacity-0 {$slideStart}"
+		 x-transition:enter-end="opacity-100 translate-x-0"
+		 x-transition:leave="transition ease-in duration-200"
+		 x-transition:leave-start="opacity-100 translate-x-0"
+		 x-transition:leave-end="opacity-0 {$slideStart}"
+		 class="fixed inset-y-0 {$side === 'left' ? 'left-0' : 'right-0'} z-50 {$widths[$width] ?? $widths['md']} bg-white shadow-xl flex flex-col">
+
+		<div n:ifset="#header" class="flex items-center justify-between px-4 py-3 border-b border-gray-200">
+			<div class="font-semibold text-lg">{include #header}</div>
+			<button @click="open = false" class="text-gray-400 hover:text-gray-600 focus:outline-none cursor-pointer">&#10005;</button>
+		</div>
+
+		<div class="flex-1 overflow-y-auto px-4 py-4">
+			{include #content}
+		</div>
+
+		<div n:ifset="#footer" class="px-4 py-3 border-t border-gray-200">
+			{include #footer}
+		</div>
+	</div>
+</div>

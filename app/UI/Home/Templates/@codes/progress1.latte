@@ -1,0 +1,16 @@
+{embed "~progress", value: 65, max: 100, type: 'success'}
+	{block label}
+		<span>Storage Used</span>
+		<span>65%</span>
+	{/block}
+{/embed}
+
+<div class="mt-4">
+	{embed "~progress", value: 30, max: 100, type: 'primary'}
+	{/embed}
+</div>
+
+<div class="mt-4">
+	{embed "~progress", value: 85, max: 100, type: 'danger', height: 'sm', showLabel: false}
+	{/embed}
+</div>

@@ -21,5 +21,15 @@ services:
 					tooltip: %appDir%/UI/@Widgets/tooltip.latte
 					collapse: %appDir%/UI/@Widgets/collapse.latte
 					tabs: %appDir%/UI/@Widgets/tabs.latte
+					alert: %appDir%/UI/@Widgets/alert.latte
+					toast: %appDir%/UI/@Widgets/toast.latte
+					accordion: %appDir%/UI/@Widgets/accordion.latte
+					badge: %appDir%/UI/@Widgets/badge.latte
+					progress: %appDir%/UI/@Widgets/progress.latte
+					popover: %appDir%/UI/@Widgets/popover.latte
+					drawer: %appDir%/UI/@Widgets/drawer.latte
+					switch: %appDir%/UI/@Widgets/switch.latte
+					card: %appDir%/UI/@Widgets/card.latte
+					stepper: %appDir%/UI/@Widgets/stepper.latte
 				])
 			)

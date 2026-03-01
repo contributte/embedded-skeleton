@@ -1,0 +1,19 @@
+{embed "~drawer", side: 'right', width: 'md'}
+	{block trigger}
+		<button class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">
+			Open Menu
+		</button>
+	{/block}
+	{block header}Navigation{/block}
+	{block content}
+		<nav class="space-y-1">
+			<a href="#" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-blue-600">Dashboard</a>
+			<a href="#" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-blue-600">Settings</a>
+			<a href="#" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-blue-600">Profile</a>
+			<a href="#" class="block py-2 px-3 rounded hover:bg-gray-100 hover:text-blue-600">Messages</a>
+		</nav>
+	{/block}
+	{block footer}
+		<button class="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600">Logout</button>
+	{/block}
+{/embed}

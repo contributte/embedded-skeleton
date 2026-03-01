@@ -1,0 +1,23 @@
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+	{embed "~card", hoverable: true, shadow: 'lg'}
+		{block header}Featured Article{/block}
+		{block content}
+			<h3 class="text-lg font-bold">Getting Started with Nette</h3>
+			<p class="text-gray-600 mt-2">Learn how to build modern PHP applications with the Nette framework.</p>
+		{/block}
+		{block footer}
+			<a href="#" class="text-blue-500 hover:underline">Read more &rarr;</a>
+		{/block}
+	{/embed}
+
+	{embed "~card", hoverable: true}
+		{block header}Quick Tip{/block}
+		{block content}
+			<h3 class="text-lg font-bold">Alpine.js + Latte</h3>
+			<p class="text-gray-600 mt-2">Combine Alpine.js reactivity with Latte templating for powerful UI components.</p>
+		{/block}
+		{block footer}
+			<a href="#" class="text-blue-500 hover:underline">Learn more &rarr;</a>
+		{/block}
+	{/embed}
+</div>
