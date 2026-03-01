@@ -1,0 +1,21 @@
+<div class="flex flex-wrap gap-2">
+	{embed "~badge", type: 'success', dot: true}
+		{block content}Active{/block}
+	{/embed}
+
+	{embed "~badge", type: 'warning'}
+		{block content}Pending{/block}
+	{/embed}
+
+	{embed "~badge", type: 'danger', removable: true}
+		{block content}Urgent{/block}
+	{/embed}
+
+	{embed "~badge", type: 'primary'}
+		{block content}New{/block}
+	{/embed}
+
+	{embed "~badge", type: 'default', rounded: false}
+		{block content}Archived{/block}
+	{/embed}
+</div>

@@ -1,0 +1,26 @@
+{default $hoverable = false}
+{default $bordered = true}
+{default $shadow = 'md'}
+
+{var $shadows = [
+	none => '',
+	sm => 'shadow-sm',
+	md => 'shadow-md',
+	lg => 'shadow-lg',
+]}
+
+<div x-data="{}"
+	 class="bg-white rounded-lg overflow-hidden {$bordered ? 'border border-gray-200' : ''} {$shadows[$shadow] ?? $shadows['md']} {$hoverable ? 'transition-shadow duration-200 hover:shadow-xl' : ''}">
+	<div n:ifset="#image" class="w-full">
+		{include #image}
+	</div>
+	<div n:ifset="#header" class="px-4 py-3 border-b border-gray-100 font-semibold text-gray-800">
+		{include #header}
+	</div>
+	<div class="px-4 py-4">
+		{include #content}
+	</div>
+	<div n:ifset="#footer" class="px-4 py-3 border-t border-gray-100 text-sm text-gray-500">
+		{include #footer}
+	</div>
+</div>

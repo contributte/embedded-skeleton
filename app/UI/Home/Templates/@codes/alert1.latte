@@ -1,0 +1,23 @@
+{embed "~alert", type: 'success'}
+	{block content}
+		Your changes have been saved successfully.
+	{/block}
+{/embed}
+
+{embed "~alert", type: 'error'}
+	{block content}
+		Something went wrong. Please try again.
+	{/block}
+{/embed}
+
+{embed "~alert", type: 'warning', dismissible: false}
+	{block content}
+		Your trial expires in 3 days.
+	{/block}
+{/embed}
+
+{embed "~alert", type: 'info'}
+	{block content}
+		A new version is available.
+	{/block}
+{/embed}

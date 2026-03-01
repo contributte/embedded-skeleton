@@ -1,0 +1,26 @@
+{default $type = 'info'}
+{default $dismissible = true}
+
+{var $colors = [
+	info => 'bg-blue-50 border-blue-400 text-blue-800',
+	success => 'bg-green-50 border-green-400 text-green-800',
+	warning => 'bg-yellow-50 border-yellow-400 text-yellow-800',
+	error => 'bg-red-50 border-red-400 text-red-800',
+]}
+
+<div x-data="{ visible: true }" x-show="visible"
+	 x-transition:leave="transition ease-in duration-200"
+	 x-transition:leave-start="opacity-100"
+	 x-transition:leave-end="opacity-0"
+	 class="flex items-start border-l-4 p-4 rounded-md {$colors[$type] ?? $colors['info']}"
+	 role="alert">
+	<div n:ifset="#icon" class="flex-shrink-0 mr-3">
+		{include #icon}
+	</div>
+	<div class="flex-1">
+		{include #content}
+	</div>
+	<button n:if="$dismissible" @click="visible = false" class="flex-shrink-0 ml-3 focus:outline-none cursor-pointer opacity-70 hover:opacity-100">
+		&#10005;
+	</button>
+</div>

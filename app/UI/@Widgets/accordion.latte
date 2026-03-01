@@ -1,0 +1,37 @@
+{default $sections = 0}
+{default $exclusive = true}
+{default $defaultOpen = 0}
+
+{if $exclusive}
+<div x-data="{ active: {$defaultOpen} }">
+	{for $i = 1; $i <= $sections; $i++}
+	<div class="border-b border-gray-200">
+		<button @click="active = active === {$i} ? 0 : {$i}"
+				class="w-full flex justify-between items-center py-3 px-4 text-left font-medium hover:bg-gray-50 focus:outline-none cursor-pointer"
+				:class="active === {$i} ? 'text-blue-600' : 'text-gray-700'">
+			<span>{block "header-$i"}{/block}</span>
+			<span class="transform transition-transform duration-200" :class="active === {$i} ? 'rotate-180' : ''">&#9660;</span>
+		</button>
+		<div x-show="active === {$i}" x-collapse x-cloak class="px-4 pb-4 text-gray-600">
+			{block "content-$i"}{/block}
+		</div>
+	</div>
+	{/for}
+</div>
+{else}
+<div x-data="{ {for $i = 1; $i <= $sections; $i++}s{$i}: {$i === $defaultOpen ? 'true' : 'false'}{if $i < $sections}, {/if}{/for} }">
+	{for $i = 1; $i <= $sections; $i++}
+	<div class="border-b border-gray-200">
+		<button @click="s{$i} = !s{$i}"
+				class="w-full flex justify-between items-center py-3 px-4 text-left font-medium hover:bg-gray-50 focus:outline-none cursor-pointer"
+				:class="s{$i} ? 'text-blue-600' : 'text-gray-700'">
+			<span>{block "header-$i"}{/block}</span>
+			<span class="transform transition-transform duration-200" :class="s{$i} ? 'rotate-180' : ''">&#9660;</span>
+		</button>
+		<div x-show="s{$i}" x-collapse x-cloak class="px-4 pb-4 text-gray-600">
+			{block "content-$i"}{/block}
+		</div>
+	</div>
+	{/for}
+</div>
+{/if}

@@ -1,0 +1,29 @@
+{default $steps = 0}
+{default $current = 1}
+{default $clickable = false}
+
+<div x-data="{ current: {$current} }">
+	<div class="flex items-center">
+		{for $i = 1; $i <= $steps; $i++}
+			{* Step circle and label *}
+			<div class="flex flex-col items-center {$clickable ? 'cursor-pointer' : ''}"
+				 {if $clickable}@click="current = {$i}"{/if}>
+				<div :class="current > {$i} ? 'bg-green-500 text-white' : current === {$i} ? 'bg-blue-500 text-white ring-4 ring-blue-200' : 'bg-gray-200 text-gray-500'"
+					 class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300">
+					<span x-show="current <= {$i}">{$i}</span>
+					<span x-show="current > {$i}" x-cloak>&#10003;</span>
+				</div>
+				<span class="mt-1 text-xs font-medium"
+					  :class="current === {$i} ? 'text-blue-600' : 'text-gray-500'">
+					{block "step-$i"}{/block}
+				</span>
+			</div>
+			{* Connecting line *}
+			{if $i < $steps}
+				<div class="flex-1 h-0.5 mx-2 transition-colors duration-300"
+					 :class="current > {$i} ? 'bg-green-500' : 'bg-gray-200'">
+				</div>
+			{/if}
+		{/for}
+	</div>
+</div>

@@ -1,0 +1,29 @@
+{default $value = 0}
+{default $max = 100}
+{default $type = 'primary'}
+{default $showLabel = true}
+{default $height = 'md'}
+
+{var $barColors = [
+	primary => 'bg-blue-500',
+	success => 'bg-green-500',
+	warning => 'bg-yellow-500',
+	danger => 'bg-red-500',
+]}
+{var $heights = [
+	sm => 'h-1.5',
+	md => 'h-4',
+	lg => 'h-6',
+]}
+
+<div x-data="{ value: {$value}, max: {$max} }">
+	<div n:ifset="#label" class="flex justify-between mb-1 text-sm font-medium text-gray-700">
+		{include #label}
+	</div>
+	<div class="w-full bg-gray-200 rounded-full overflow-hidden {$heights[$height] ?? $heights['md']}">
+		<div class="{$barColors[$type] ?? $barColors['primary']} {$heights[$height] ?? $heights['md']} rounded-full transition-all duration-500 ease-out flex items-center justify-center"
+			 :style="'width: ' + Math.min(100, Math.round(value / max * 100)) + '%'">
+			<span n:if="$showLabel && $height !== 'sm'" class="text-xs font-bold text-white" x-text="Math.min(100, Math.round(value / max * 100)) + '%'"></span>
+		</div>
+	</div>
+</div>
