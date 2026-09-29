@@ -1,0 +1,16 @@
+{* {embed} has its own variable scope, so $counter is passed in explicitly. *}
+{* The snippet lives inside the embed, so default.latte wraps this include in {snippetArea ajaxCard}. *}
+{embed "~card", shadow: 'lg', counter: $counter}
+	{block header}AJAX counter{/block}
+	{block content}
+		{snippet counter}
+			<div class="flex items-center gap-4">
+				<span class="text-3xl font-bold">{$counter}</span>
+				<a n:href="increment!" class="ajax bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">+1</a>
+			</div>
+		{/snippet}
+	{/block}
+	{block footer}
+		Only the <code>counter</code> snippet inside the embedded card is redrawn via <a href="https://naja.js.org" class="text-blue-500 hover:underline">Naja</a>.
+	{/block}
+{/embed}
