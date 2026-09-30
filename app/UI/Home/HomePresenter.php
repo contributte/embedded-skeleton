@@ -23,6 +23,9 @@ class HomePresenter extends BasePresenter
 		if ($this->isAjax()) {
 			$this->redrawControl('ajaxCard');
 			$this->redrawControl('counter');
+			// Keep a clean URL in the address bar (Naja history), so a reload does not repeat the signal
+			$this->payload->postGet = true;
+			$this->payload->url = $this->link('this');
 		} else {
 			$this->redirect('this');
 		}
